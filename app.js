@@ -1,12 +1,22 @@
 const http = require("http");
-const path = require("path");
-const fs = require("fs");
 const { fetchRestaurants } = require("./db"); // Import MongoDB function
 
 const PORT = process.env.PORT || 2905;
 
 const server = http.createServer(async (req, res) => {
   console.log(req.url);
+
+  // Set CORS headers for all responses
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:8080"); // Allow requests from your frontend
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Allow specific HTTP methods
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+
+  if (req.method === "OPTIONS") {
+    // Handle preflight request
+    res.writeHead(204); // No content for preflight
+    res.end();
+    return;
+  }
 
   if (req.url === "/api/resturants/") {
     try {
