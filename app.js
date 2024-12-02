@@ -7,7 +7,7 @@ const server = http.createServer(async (req, res) => {
   console.log(req.url);
 
   // Set CORS headers for all responses
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:8080"); // Allow requests from your frontend
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Allow requests from your frontend
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Allow specific HTTP methods
   res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
 
