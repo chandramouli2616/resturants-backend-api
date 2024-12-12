@@ -1,0 +1,206 @@
+/* style.css */
+
+:root {
+    --main-radius: 10px;
+    --main-padding: 10px;
+}
+.navbar {
+    display: grid;
+    grid-template-rows:  1fr;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    height: 10vh;
+    grid-template-areas:
+    "About""Education""Projects""Experience""Blogs";  
+    background-color: #E3C75F;
+    align-items:center;
+    justify-items: center; 
+    border-radius: var(--main-radius);
+}
+.Intro {
+    display: grid; 
+    grid-template-rows:1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr ;
+    gap:2rem;
+    border-radius: var(--main-radius);
+    padding: 1rem; 
+}
+.profile-image-container {
+    width: 100%;
+    margin-bottom:2rem;
+}
+.about-image {
+    width:100%; 
+    max-height:300px;
+    height:auto;
+   
+}
+.about-container {
+    display:grid;
+    grid-template-rows:1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1rem;
+    padding:1rem;
+    background-color: #F2E3D5;
+    border-radius: var(--main-radius);
+    width:100%; 
+    box-sizing:border-box; 
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.about-paragraph{
+    gap:0.5rem;
+    padding:1rem;
+    background-color: whitesmoke;
+    border-radius: var(--main-radius);
+    height: 100%;
+    box-sizing: border-box; 
+    background-color: #3CA6A6;
+    align-items:center;
+    justify-items:center;
+    justify-content:center;
+
+}
+.education-container {
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1rem;
+    
+}
+.content-box {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0.5rem;
+    padding:1rem;
+    background-color: #3CA6A6;
+    border-radius:var(--main-radius); 
+    box-sizing: border-box;
+}
+.content-box img {
+    width: 50px; 
+    height: auto; 
+}
+.projects-container {
+    display: grid;
+    grid-template-rows:1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.project-box {
+    display: grid;
+    grid-template-columns: 1fr; 
+    align-items: center; 
+    box-sizing: border-box; 
+
+    gap: 1rem; 
+    padding: 1.5rem; 
+    background-color: #3CA6A6; 
+    border-radius: var(--main-radius); 
+   
+}
+
+
+.experience-blogs-container {
+    display: grid;
+    grid-template-rows:1fr;
+    grid-template-columns: 1fr 1fr; 
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 220px;
+    margin-right: 220px;
+}
+
+.experience-section, .blogs-section {
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding:1rem;
+    gap: 1rem; 
+    background-color: #3CA6A6;
+    border-radius: var(--main-radius); 
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+}
+main{
+    background: #818274;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+footer{
+    background-color: #E3C75F;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    height:18vh;
+}
+.footer-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+    align-items: center;
+    gap:1rem;
+
+}
+@media only screen and (max-width:550px){
+    .navbar {
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns:1fr; 
+        align-items:center; 
+        height:auto;
+    }
+    .footer-container{
+        grid-template-rows:1fr 1fr 1fr;
+        grid-template-columns:1fr; 
+        align-items:center; 
+    }
+    .Intro {
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+    .profile-image-container {
+        width: auto; 
+        margin-bottom: 1rem; 
+    }
+    .about-image {
+        width: 100%; 
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 0; 
+    }
+    .about-paragraph {
+        padding: 1rem; 
+    }
+    .projects-container{
+        grid-template-columns:1fr; 
+    }
+
+    .education-container {
+        grid-template-columns: 1fr; 
+    }
+    .experience-blogs-container {
+        grid-template-columns: 1fr; 
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+    footer {
+        height:auto;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+.bar{
+    display:none;
+}
+}
+@media only screen and (max-width: 500px) {
+    .bar {
+        display: block;
+    }
+}

@@ -1,19 +1,16 @@
 const { MongoClient } = require("mongodb");
-
 const uri = "mongodb+srv://mouli:Bmouli%4012@cluster0.8pf7l.mongodb.net/RestaurantData?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
-
 async function connectToDatabase() {
   try {
     await client.connect();
     console.log("Connected to MongoDB");
-    return client.db("RestaurantData"); // Return the database instance
+    return client.db("RestaurantData");
   } catch (err) {
     console.error("Failed to connect to MongoDB:", err);
     throw err;
   }
 }
-
 async function fetchRestaurants() {
   try {
     const db = await connectToDatabase();
@@ -24,5 +21,4 @@ async function fetchRestaurants() {
     throw err;
   }
 }
-
 module.exports = { fetchRestaurants };

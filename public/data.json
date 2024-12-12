@@ -1,14 +1,9 @@
 {
     "projects": [
       {
-        "name": "Portfolio Website",
-        "description": "A personal portfolio showcasing my projects and skills.",
-        "url": "https://example.com"
-      },
-      {
-        "name": "Weather App",
-        "description": "A weather application built using React and OpenWeather API.",
-        "url": "https://example.com/weather"
+        "name": "Restaurants Website",
+        "description": "A personal website showing the list of restaurants data.",
+        "url": "https://resturants-backend-api.onrender.com/api/resturants/"
       }
     ]
   }
