@@ -51,7 +51,7 @@ const server = http.createServer(async (req, res) => {
         res.end(content);
       }
     });
-  } else if (req.url === "/api/restaurants/") {
+  } else if (req.url === "/api") {
     try {
       const restaurants = await fetchRestaurants();
       res.writeHead(200,{ "Content-Type": "application/json" });
